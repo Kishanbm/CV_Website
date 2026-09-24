@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #1e1b4b;
+  --color-accent: #7c3aed;
+  --color-accent-deep: #5b21b6;
+  --color-muted: #4b4468;
+  --color-soft: #9b93b8;
+  --color-line: #e3dbf7;
+  --color-lilac: #f1eaff;
+  --color-page: #faf8ff;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #faf8ff 0%, #f3edff 55%, #eee6ff 100%);
+  background-attachment: fixed;
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (min-width: 640px) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility eyebrow {
+  color: var(--color-accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@utility card {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: 1rem;
+  box-shadow: 0 1px 2px rgba(30, 27, 75, 0.04);
+}
+
+@utility icon-bubble {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 9999px;
+  background: var(--color-lilac);
+  border: 1px solid var(--color-line);
+  color: var(--color-accent);
+}
+
+::selection {
+  background: #ddd4f5;
+}
